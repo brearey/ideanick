@@ -1,20 +1,37 @@
 export const App = () => {
+    const ideas = [
+        {
+            name: 'Idea 1',
+            description: 'Idea 1 description'
+        },
+        {
+            name: 'Idea 2',
+            description: 'Idea 2 description'
+        },
+        {
+            name: 'Idea 3',
+            description: 'Idea 3 description'
+        },
+        {
+            name: 'Idea 4',
+            description: 'Idea 4 description'
+        },
+        {
+            name: 'Idea 5',
+            description: 'Idea 5 description'
+        },
+    ]
     return (
         <div>
             <h1>Ideanick</h1>
             <div>
-                <div>
-                    <h2>Idea 1</h2>
-                    <p>Idea 1 description</p>
-                </div>
-                <div>
-                    <h2>Idea 2</h2>
-                    <p>Idea 2 description</p>
-                </div>
-                <div>
-                    <h2>Idea 3</h2>
-                    <p>Idea 3 description</p>
-                </div>
+                {
+                    ideas.map(idea => {
+                    return <div key={idea.name}>
+                        <h2>{idea.name}</h2>
+                        <p>{idea.description}</p>
+                    </div>
+                })}
             </div>
         </div>
     );
