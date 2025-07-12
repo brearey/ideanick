@@ -42,7 +42,7 @@ importers:
   webapp:
     dependencies:
       '@ideanick/backend':
-        specifier: workspace:*
+        specifier: workspace:../backend
         version: link:../backend
       '@tanstack/react-query':
         specifier: ^5.83.0
