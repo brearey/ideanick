@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@ideanick/backend':
+        specifier: workspace:../backend
+        version: link:../backend
       '@tanstack/react-query':
         specifier: ^5.83.0
         version: 5.83.0(react@19.1.0)
