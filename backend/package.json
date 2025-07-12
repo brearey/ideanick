@@ -1,6 +1,6 @@
 {
-  "name": "ideanick_backend",
-  "private": "true",
+  "name": "@ideanick/backend",
+  "private": true,
   "version": "0.0.0",
   "scripts": {
     "dev": "ts-node-dev --rs ./src/index.ts",
