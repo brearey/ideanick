@@ -16,8 +16,16 @@ export default tseslint.config([
       reactRefresh.configs.vite,
     ],
     languageOptions: {
+      parserOptions: {
+        project: ['./webapp/tsconfig.node.json', './webapp/tsconfig.app.json', './webapp/tsconfig.json'],
+      },
       ecmaVersion: 2020,
       globals: globals.browser,
+    },
+    rules: {
+      'no-console': 'warn',
+      'no-unused-vars': 'warn',
+      'no-undef': 'warn',
     },
   },
 ])
