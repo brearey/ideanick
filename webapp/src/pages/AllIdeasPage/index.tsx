@@ -15,7 +15,7 @@ export const AllIdeasPage = () => {
     <div>
       <h1>All ideas</h1>
       <div>
-        {data.ideas.map((idea) => {
+        {data?.ideas.map((idea) => {
           return (
             <div key={idea.nick}>
               <h2>{idea.name}</h2>
