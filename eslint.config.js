@@ -6,7 +6,7 @@ import tseslint from 'typescript-eslint'
 import { globalIgnores } from 'eslint/config'
 
 export default tseslint.config([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', 'node_modules']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
@@ -16,16 +16,28 @@ export default tseslint.config([
       reactRefresh.configs.vite,
     ],
     languageOptions: {
-      parserOptions: {
-        project: ['./webapp/tsconfig.node.json', './webapp/tsconfig.app.json', './webapp/tsconfig.json'],
-      },
       ecmaVersion: 2020,
       globals: globals.browser,
     },
     rules: {
-      'no-console': 'warn',
+      'no-console': [
+        'error',
+        {
+          allow: ['info', 'warn', 'error'],
+        },
+      ],
       'no-unused-vars': 'warn',
       'no-undef': 'warn',
+      'sort-imports': [
+        'error',
+        {
+          ignoreCase: false,
+          ignoreDeclarationSort: false,
+          ignoreMemberSort: false,
+          memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+          allowSeparatedGroups: false,
+        },
+      ],
     },
   },
 ])
