@@ -8,7 +8,8 @@
     "dev": "pnpm -r --parallel dev",
     "types": "concurrently 'pnpm b types' 'pnpm w types'",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext .ts,.tsx .",
-    "format": "pnpm -r --parallel format"
+    "format": "pnpm -r --parallel format",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@eslint/js": "^9.31.0",
@@ -20,6 +21,8 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "eslint-plugin-react-x": "^1.52.3",
     "globals": "^16.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
