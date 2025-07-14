@@ -1,7 +1,7 @@
-import express from 'express'
 import * as trpcExpress from '@trpc/server/adapters/express'
-import { trpcRouter } from './trpc'
 import cors from 'cors'
+import express from 'express'
+import { trpcRouter } from './trpc'
 
 const expressApp = express()
 
@@ -14,5 +14,5 @@ expressApp.get('/ping', (req, res) => {
 expressApp.use('/trpc', trpcExpress.createExpressMiddleware({ router: trpcRouter }))
 
 expressApp.listen(3000, () => {
-  console.log(`server started on http://localhost:3000`)
+  // console.log(`server started on http://localhost:3000`)
 })

@@ -7,6 +7,7 @@
     "w": "pnpm --filter @ideanick/webapp",
     "dev": "pnpm -r --parallel dev",
     "types": "concurrently 'pnpm b types' 'pnpm w types'",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext .ts,.tsx .",
     "format": "pnpm -r --parallel format"
   },
   "devDependencies": {
