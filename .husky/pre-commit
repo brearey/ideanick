@@ -1,2 +1,5 @@
-pnpm lint-staged
-pnpm types
+#!/usr/bin/env bash
+. "$(dirname "$0")/_/husky.sh"
+
+npx pnpm lint-staged
+npx pnpm types
