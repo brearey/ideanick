@@ -1,5 +1,5 @@
 import { AllIdeasPage } from './pages/AllIdeasPage'
-import { TrpcProvider } from './lib/trpc.tsx'
+import { TrpcProvider } from './lib/TrpcProvider.tsx'
 
 export const App = () => {
   return (

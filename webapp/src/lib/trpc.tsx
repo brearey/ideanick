@@ -1,10 +1,9 @@
-import * as React from "react";
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { QueryClient } from '@tanstack/react-query'
 import type { TrpcRouter } from '@ideanick/backend/src/trpc.ts'
 import { createTRPCReact } from '@trpc/react-query'
 import { httpBatchLink } from '@trpc/client'
 
-export const trpc = createTRPCReact<TrpcRouter>()
+const trpc = createTRPCReact<TrpcRouter>()
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -22,10 +21,4 @@ const trpcClient = trpc.createClient({
   ],
 })
 
-export const TrpcProvider = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <trpc.Provider client={trpcClient} queryClient={queryClient}>
-      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-    </trpc.Provider>
-  )
-}
+export { trpc, queryClient, trpcClient }
