@@ -1,2 +1,4 @@
+#!/bin/sh
+
 pnpm lint-staged
 pnpm types
